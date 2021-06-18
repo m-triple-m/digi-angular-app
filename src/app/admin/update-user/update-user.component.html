@@ -1,0 +1,27 @@
+<div class="col-md-10">
+    <nb-card *ngIf="userform">
+        <nb-card-header>
+
+        </nb-card-header>
+        <nb-card-body>
+            <form [formGroup]="userform" (ngSubmit)="updateUser()">
+                <mat-form-field class="mt-5 w-100" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username">
+                </mat-form-field>
+
+                <mat-form-field class="mt-4 w-100" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field class="mt-4 w-100" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+
+                <button nbButton status="primary" hero class="w-100">Submit</button>
+            </form>
+        </nb-card-body>
+    </nb-card>
+</div>

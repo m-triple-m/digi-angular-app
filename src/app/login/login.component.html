@@ -1,0 +1,33 @@
+<div class="col-md-3 mx-auto">
+    <mat-card class="mt-5">
+        <mat-card-content>
+            <form style="padding: 30px;" [formGroup]="loginform" (ngSubmit)="loginSubmit()">
+
+                <h1 class="text-center">LOGIN HERE</h1>
+                <hr>
+
+                <mat-form-field class="mt-5 w-100" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="text" matInput formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field class="mt-5 w-100" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password">
+                </mat-form-field>
+
+
+                <div class="text-center">
+                    <button mat-raised-button color="primary" class="mt-5 w-100">Submit</button>
+                </div>
+
+
+            </form>
+
+            <div class="text-center">
+                <a [routerLink]="['/signup']" routerLinkActive="router-link-active" >Not Registered Yet</a>
+                <!-- <a class="ml-auto" [routerLink]="['/reset']" routerLinkActive="router-link-active" >Forgot Password?</a> -->
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

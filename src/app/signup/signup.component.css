@@ -1,0 +1,8 @@
+.card{
+    margin-top: 10%;
+}
+
+.img-div{
+    background: url('/assets/img2.svg') center no-repeat;
+    background-size: cover;
+}

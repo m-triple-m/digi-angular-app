@@ -1,0 +1,23 @@
+<nb-layout>
+    <nb-layout-header>
+        <nb-user size="large"
+             [name]="userservice.currentUser.username"
+             [title]="userservice.currentUser.email"
+             [picture]="url+userservice.currentUser.avatar">
+    </nb-user>
+    </nb-layout-header>
+
+        <nb-sidebar>
+
+        </nb-sidebar>
+
+        <nb-layout-column>
+            <!-- <img [src]="url+userservice.currentUser.avatar" alt=""> -->
+            <router-outlet></router-outlet>
+        </nb-layout-column>
+
+    <nb-layout-footer>
+
+    </nb-layout-footer>
+</nb-layout>
+

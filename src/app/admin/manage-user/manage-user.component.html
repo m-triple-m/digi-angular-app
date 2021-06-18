@@ -1,0 +1,37 @@
+<div class="col-md-10 mx-auto">
+    <nb-card accent="primary" *ngIf="!loading">
+        <nb-card-header>
+            <h2>Manage Users</h2>
+        </nb-card-header>
+
+        <nb-card-body>
+<!--             
+            <ul *ngFor="let user of usersList">
+                <li>{{user.username}}</li>
+                <li>{{user.email}}</li>
+            </ul> -->
+
+            <nb-accordion>
+                <nb-accordion-item *ngFor="let user of usersList">
+                    <nb-accordion-item-header>
+                      {{user.username}}
+                    </nb-accordion-item-header>
+                    <nb-accordion-item-body>
+                      <h4>Email : {{user.email}}</h4>
+                      <h4>Password : {{user.password}}</h4>
+                      <h4>Age : {{user.age}}</h4>
+
+
+                      <button nbButton hero status="primary" class="mt-5" (click)="updateUser(user._id)" >Update</button>
+                      <button nbButton hero status="danger" class="mt-5" (click)="deleteUser(user._id)">Delete</button>
+
+                    </nb-accordion-item-body>
+
+                  </nb-accordion-item>
+            </nb-accordion>
+
+
+        </nb-card-body>
+
+    </nb-card>
+</div>
